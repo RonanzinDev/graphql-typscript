@@ -10,7 +10,7 @@ async function bootstrap() {
         resolvers: [
             AppointmentsResolver
         ],
-        emitSchemaFile: path.resolve(__dirname, 'schema.gql')
+        emitSchemaFile: path.resolve(__dirname, 'schema.gql') // If this is argumment is not passed, then the file will be create in memory
     })
 
     const server = new ApolloServer({schema})
